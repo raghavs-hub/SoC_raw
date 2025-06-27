@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+\title{Searching}
+\author{Raghav Sharama(24B1010)}
+\date{June 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{Searching}
+As the name suggests, it is basically hunting down a given element in a datastructure.\\
+It is much easier to search in a sorted dataset than an unsorted one, in case of ordered keys we could search any sorted array in $O(\log n)$ time and any unsorted array in $O(n)$. 
+
+\section{Binary Search}
+The are two variations of this mentioned in skienna's book-
+\subsection{When the size of an array is known}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{"binsearch1.png"}
+    \caption{Binary search when size of array is known}
+    \label{fig:binsearch1}
+\end{figure}
+
+\noindent This code would return the index of the number if it has been found, if not it will return $-1$.
+\\
+This simply works by checking the middle element if there is a match then it returns it otherwise it checks from \texttt{low} to \texttt{mid-1} or from \texttt{mid+1} to \texttt{high} depending on the value of \texttt{arr[mid]}.
+\subsection{When the size of array is unknown}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{"binsearch2.png"}
+    \caption{Binary search when size of array is not known}
+    \label{fig:binsearch2}
+\end{figure}
+\noindent This code essentially checks for the value in intervals at powers of two. By this we find the interval in which our required value lies. This could also be used if we know that our value is rather close to the starting position.
+
+\subsection{Searching in maps,vectors and sets}
+We could search for elements in these standard data structures using the find function.\\
+\begin{verbatim}
+    auto x = map_name.find(key);
+    auto y = set_name.find(key);
+    auto z = vec_name.find(key);
+\end{verbatim}
+In the code, \texttt{x}, \texttt{y}, and \texttt{z} are iterators pointing to the corresponding elements in the data structure. If the keys are not present, these iterators point to \texttt{var\_name.end()}.
+\\
+The searching in maps and sets is done in $O(\log n)$ complexity,whereas the searching in vectors is done in $O(n)$ time i.e. Linear Search.
+
+\end{document}

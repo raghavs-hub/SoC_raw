@@ -1,0 +1,39 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+typedef vector<int> vi;
+typedef pair<int, int> pii;
+
+#define test int t;cin >> t;for(int z=0;z<t;z++)
+#define f(start,end,name) for(int name = (start);name < (end);name++)
+#define PB push_back
+#define ALL(x) (x).begin(), (x).end()
+#define MP make_pair
+#define nl '\n'
+#define setIO(inputFile, outputFile) freopen(inputFile, 'r', stdin); freopen(outputFile, 'w', stdout)
+
+
+int main()
+{
+ios::sync_with_stdio(0);
+cin.tie(0);
+
+test{
+    int x;cin >> x;
+    map<int,int> factors;
+    for(int i=2;i*i<=x;i++){
+        while(x%i==0){
+            factors[i]++;
+            x /= i;
+        }
+    }
+    if(x != 1) factors[x]++;
+
+    int num=1;
+    for(auto c: factors){
+        num *= (c.second+1);
+    }
+    cout << num <<nl;
+}
+}
