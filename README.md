@@ -56,3 +56,23 @@
 - Probability
 - Greedy algorithms and practice
 - Bit manipulation tricks
+
+## Week 5
+- Defining States and Transitions
+- Memoization and Tabulation Table
+- Practiced a wide variety of DP problems
+
+## Week 6
+- Graph Representations: Adjacency list, Edge List, Adjacency Matrix
+- Graph Traversal Techniques - BFS and DFS
+- Path Finding Algorithms
+  - Dijkstra's Algorithm
+  - Bellman-Ford Algorithm
+  - Floyd-Warshall Algorithm
+- Minimum Spanning Tree
+  - Prim's Algorithm
+  - Kruskal's Algorithm
+
+## Week 7
+- Understanding Binary Indexed Trees
+- Creating a variant of Binary Indexed trees to find the sum of a sub-array in logrithmic time.
